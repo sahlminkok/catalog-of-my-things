@@ -2,7 +2,9 @@ require_relative 'all_paths'
 
 class App
   def initialize
-    @books = []
+    data_manager = DataManager.new
+    @data_handler = DataHandler.new(data_manager)
+    @books = @data_handler.load_books_from_json
     @labels = []
   end
 
@@ -40,6 +42,7 @@ class App
     @books << book
 
     puts "Book created Successfully! (id: #{book.id})"
+    @data_handler.save_books_to_json(@books)
   end
 
   def exit_app
