@@ -1,4 +1,4 @@
-require 'all_paths'
+require_relative 'all_paths'
 
 class Options
   def initialize(app)
@@ -14,7 +14,7 @@ class Options
       break if option == 10
     end
   end
-  
+
   private
 
   def display_options
@@ -37,7 +37,7 @@ class Options
     puts ' '
     puts '[10] Exit'
   end
-  
+
   def handle_option(option)
     option_actions = {
       1 => -> { @app.list_books },

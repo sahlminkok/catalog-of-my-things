@@ -1,4 +1,4 @@
-require 'all_paths'
+require './all_paths'
 
 class AppStarter
   def initialize(app)

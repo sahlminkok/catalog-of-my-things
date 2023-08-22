@@ -1,4 +1,4 @@
-require 'all_paths'
+require_relative 'all_paths'
 
 app = App.new
 app_initializer = AppStarter.new(app)
