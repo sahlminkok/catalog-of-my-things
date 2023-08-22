@@ -26,6 +26,22 @@ class App
     end
   end
 
+  def add_book
+    print "Enter publisher name: "
+    name = gets.chomp
+    
+    print "Enter cover status: [good or bad]: "
+    cover_status = gets.chomp
+
+    print "Enter date of publishing [yyyy-mm-dd]: "
+    publish_date = gets.chomp
+
+    book = Book.new(name, cover_status, publish_date);
+    @books << book
+
+    puts "Book created Successfully! (id: #{book.id})"
+  end
+
   def exit_app
     puts 'Thank you for using this App.'
     exit
