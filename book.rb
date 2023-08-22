@@ -1,4 +1,4 @@
-require_relative 'item'
+require_relative 'all_paths'
 
 class Book < Item
   attr_accessor :publisher, :cover_state
