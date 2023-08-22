@@ -2,4 +2,4 @@ require './app'
 require './item'
 require './main'
 require './options'
-
+require './app_starter'
