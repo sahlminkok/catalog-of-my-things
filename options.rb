@@ -19,8 +19,8 @@ class Options
 
   def display_options
     puts 'PLease Select an option'
-    puts 'Books Section'
     puts ' '
+    puts 'Books Section'
     puts '[1] List all Books'
     puts '[2] List all Labels'
     puts '[3] Add a Book'
@@ -30,7 +30,7 @@ class Options
     puts '[5] List all Genres'
     puts '[6] Add a music Album'
     puts ' '
-    puts ' Games Section'
+    puts 'Games Section'
     puts '[7] List all games'
     puts '[8] List all authors'
     puts '[9] Add a game'
