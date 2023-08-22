@@ -18,25 +18,25 @@ class App
   end
 
   def list_labels
-    if @labels.empty?
-      puts 'No Labels available'
-      @labels.each_with_index do |label, index|
-        puts "#{index} id: #{label.id} title: \"#{label.title}\" color: #{label.color}"
-      end
+    return unless @labels.empty?
+
+    puts 'No Labels available'
+    @labels.each_with_index do |label, index|
+      puts "#{index} id: #{label.id} title: \"#{label.title}\" color: #{label.color}"
     end
   end
 
   def add_book
-    print "Enter publisher name: "
+    print 'Enter publisher name: '
     name = gets.chomp
-    
-    print "Enter cover status: [good or bad]: "
+
+    print 'Enter cover status: [good or bad]: '
     cover_status = gets.chomp
 
-    print "Enter date of publishing [yyyy-mm-dd]: "
+    print 'Enter date of publishing [yyyy-mm-dd]: '
     publish_date = gets.chomp
 
-    book = Book.new(name, cover_status, publish_date);
+    book = Book.new(name, cover_status, publish_date)
     @books << book
 
     puts "Book created Successfully! (id: #{book.id})"
