@@ -1,13 +1,13 @@
-require_relative 'all_paths'
+require_relative 'item'
 
 class Book < Item
-  def initialize(publisher, cover_state, publish_date, id = nil)
-    super(publish_date, id)
+  attr_accessor :publisher, :cover_state
+
+  def initialize(publisher, cover_state, publish_date, archived: false)
+    super(publish_date, archived: archived)
     @publisher = publisher
     @cover_state = cover_state
   end
-
-  attr_accessor :publisher, :cover_state
 
   private
 
