@@ -26,4 +26,15 @@ class Item
   def add_label(label)
     @labels << label
   end
+
+  def move_to_archived
+    @archived = can_be_archived?
+  end
+
+  private
+
+  def can_be_archived?
+    years_difference = (Date.today.year - Date.parse(@publish_date).year)
+    years_difference > 10
+  end
 end
