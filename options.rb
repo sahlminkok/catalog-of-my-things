@@ -11,7 +11,7 @@ class Options
       display_options
       option = gets.chomp.to_i
       handle_option(option)
-      break if option == 11
+      break if option == 10
     end
   end
   
@@ -30,11 +30,29 @@ class Options
     puts '[5] List all Genres'
     puts '[6] Add a music Album'
     puts ' '
-    puts '[7] Games Section'
-    puts '[8] List all games'
-    puts '[9] List all authors'
-    puts '[10] Add a game'
+    puts ' Games Section'
+    puts '[7] List all games'
+    puts '[8] List all authors'
+    puts '[9] Add a game'
     puts ' '
-    puts '[11] Exit'
+    puts '[10] Exit'
+  end
+  
+  def handle_option(option)
+    option_actions = {
+      1 => -> { @app.list_books },
+      2 => -> { @app.list_labels },
+      3 => -> { @app.add_book },
+      4 => -> { @app.list_music_albums },
+      5 => -> { @app.list_all_genres },
+      6 => -> { @app.add_album },
+      7 => -> { @app.list_all_games },
+      8 => -> { @app.list_all_authors },
+      9 => -> { @app.add_game },
+      10 => -> { @app.exit_app },
+      default: -> { puts 'Enter a number appearing in the options above [1 - 10]' }
+    }
+    action = option_actions[option] || option_options[:default]
+    action.call
   end
 end
