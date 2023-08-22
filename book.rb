@@ -9,6 +9,20 @@ class Book < Item
     @cover_state = cover_state
   end
 
+  def to_hash
+    super.merge(
+      publisher: @publisher,
+      cover_state: @cover_state
+    )
+  end
+
+  def self.new_from_hash(hash)
+    super(hash).tap do |book|
+      book.publisher = hash[:publisher]
+      book.cover_state = hash[:cover_state]
+    end
+  end
+
   private
 
   def can_be_archived?()
