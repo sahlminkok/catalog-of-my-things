@@ -7,7 +7,7 @@ class Book < Item
     @cover_state = cover_state
   end
 
-  attr_accessor :@publisher, :@cover_state
+  attr_accessor :publisher, :cover_state
 
   private
 
