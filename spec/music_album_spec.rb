@@ -16,4 +16,12 @@ RSpec.describe MusicAlbum do
 
     expect(album.on_spotify).to be_truthy
   end
+
+  it 'can be archived if publish_date is greater than ten and on_spotify is true' do
+    album = MusicAlbum.new('2020-01-01', on_spotify: true)
+    album2 = MusicAlbum.new('2010-01-01', on_spotify: false)
+
+    expect(album.can_be_archived?).to be_falsy
+    expect(album2.can_be_archived?).to be_truthy
+  end
 end
