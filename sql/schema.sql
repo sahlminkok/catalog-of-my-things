@@ -14,3 +14,10 @@ CREATE TABLE music_album (
   on_spotify BOOLEAN,
   PRIMARY KEY (id)
 );
+
+CREATE TABLE genre (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(255),
+  item_id INT,
+  PRIMARY KEY (id)
+);
