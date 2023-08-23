@@ -9,6 +9,8 @@ class App
     @labels = []
     @albums = []
     @genres = []
+    @games = []
+    @authors = []
   end
 
   def list_books
@@ -76,6 +78,15 @@ class App
     @albums << album
 
     puts "Music Album created successfully, id: #{album.id}"
+    puts ' '
+  end
+
+  def list_all_games
+    puts 'No games available' if @games.empty?
+    puts ' '
+    @games.each_with_index do |game, index|
+      puts "#{index + 1}. Multiplayer: #{game.multiplayer}, Last Played At: #{game.last_played_at}"
+    end
     puts ' '
   end
 
