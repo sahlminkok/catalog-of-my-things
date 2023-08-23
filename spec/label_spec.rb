@@ -1,4 +1,4 @@
-require '../label'
+require_relative '../label'
 
 describe Label do
   describe '#initialize' do
