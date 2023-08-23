@@ -45,7 +45,7 @@ class DataHandler
 
   def load_games_from_json
     file_path = './data/games.json'
-    if File.exit?(file_path)
+    if File.exist?(file_path)
       games_data = @data_manager.load_from_json(file_path)
     else
       puts 'The JSON file does not exist. Creating an empty file'
