@@ -113,6 +113,7 @@ class App
     @games << game
 
     puts "Game created successfully: #{game.id}"
+    @data_handler.save_games_to_json(@games)
   end
 
   def exit_app
