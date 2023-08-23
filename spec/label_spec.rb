@@ -18,4 +18,14 @@ describe Label do
       expect(label.id).to eq(123)
     end
   end
+
+  describe '#add_item' do
+    it 'adds an item to the label' do
+      label = Label.new('Label', 'yellow')
+      item = double('item')
+      expect(item).to receive(:add_label).with(label)
+      label.add_item(item)
+      expect(label.items).to include(item)
+    end
+  end
 end
