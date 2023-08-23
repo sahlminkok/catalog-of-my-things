@@ -8,6 +8,13 @@ class MusicAlbum < Item
     @on_spotify = on_spotify
   end
 
+  def to_hash
+    super.merge(
+      publish_date: @publish_date
+      on_spotify: @on_spotify
+    )
+  end
+
   def can_be_archived?
     super && @on_spotify
   end
