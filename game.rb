@@ -18,6 +18,6 @@ class Game < Item
 
   def can_be_archived?()
     duration = (Date.today.year - Date.parse(@last_played_at).year)
-    super && duration > 2
+    super && (duration > 2)
   end
 end
