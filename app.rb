@@ -6,10 +6,10 @@ class App
     data_manager = DataManager.new
     @data_handler = DataHandler.new(data_manager)
     @books = @data_handler.load_books_from_json
-    @labels = []
-    @albums = []
-    @genres = []
+    @albums = @data_handler.load_albums_from_json
     @games = @data_handler.load_games_from_json
+    @labels = []
+    @genres = []
     @authors = []
   end
 
@@ -79,6 +79,8 @@ class App
 
     puts "Music Album created successfully, id: #{album.id}"
     puts ' '
+
+    @data_handler.save_albums_to_json(@albums)
   end
 
   def list_all_games
@@ -112,7 +114,7 @@ class App
     game = Game.new(multiplayer, last_played_at, publish_date)
     @games << game
 
-    puts "Game created successfully: #{game.id}"
+    puts "Game created successfully, id: #{game.id}"
     @data_handler.save_games_to_json(@games)
   end
 
