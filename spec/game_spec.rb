@@ -26,4 +26,31 @@ describe Game do
       expect(hash[:last_played_at]).to eq(last_played_at)
     end
   end
+
+  describe 'can_be_archived?' do
+    context 'when last played more than 2 years ago' do
+      it 'should return true if super method returns true' do
+        today = Date.parse('2023-01-01')
+        allow(Date).to receive(:today).and_return(today)
+        game.last_played_at = '2020-01-01'
+        expect(game.can_be_archived?).to be_falsey
+      end
+
+      it 'should return false if super method returns false' do
+        today = Date.new(2020, 1, 1)
+        allow(Date).to receive(:today).and_return(today)
+        expect(game.can_be_archived?).to be_falsey
+      end
+    end
+
+    context 'when last played less than 2 years ago' do
+      let(:last_played_at) { '2023-01-01' }
+
+      it 'should return false' do
+        today = Date.new(2023, 8, 22)
+        allow(Date).to receive(:today).and_return(today)
+        expect(game.can_be_archived?).to be_falsey
+      end
+    end
+  end
 end
