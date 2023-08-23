@@ -62,4 +62,13 @@ class DataHandler
     puts "Error loading from JSON: #{e.message}"
     []
   end
+
+  def save_albums_to_json(albums)
+    albums_data = albums.map(&:to_hash)
+    @data_manager.save_to_json('./data/albums.json', albums_data)
+    puts 'Music Album saved to record successfully'
+  rescue StandardError => e
+    puts "Error saving to Json: #{e.message}"
+    []
+  end
 end

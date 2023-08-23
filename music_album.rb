@@ -10,7 +10,7 @@ class MusicAlbum < Item
 
   def to_hash
     super.merge(
-      publish_date: @publish_date
+      publish_date: @publish_date,
       on_spotify: @on_spotify
     )
   end
