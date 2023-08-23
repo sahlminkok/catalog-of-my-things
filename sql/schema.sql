@@ -56,3 +56,29 @@ CREATE TABLE genre (
   name VARCHAR(255),
   PRIMARY KEY (id)
 );
+
+-- Game schema structure
+
+CREATE TABLE game (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  multiplayer VARCHAR(255),
+  last_played_at DATE,
+  publish_date DATE,
+  archived BOOLEAN,
+  genre_id INT,
+	label_id INT,
+	author_id INT,
+  PRIMARY KEY (id),
+	FOREIGN KEY (genre_id) REFERENCES genre(id),
+	FOREIGN KEY (label_id) REFERENCES label(id),
+	FOREIGN KEY (author_id) REFERENCES author(id)
+);
+
+-- Author schema structure
+
+CREATE TABLE author (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  PRIMARY KEY (id)
+);
