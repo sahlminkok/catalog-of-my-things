@@ -90,6 +90,15 @@ class App
     puts ' '
   end
 
+  def list_all_authors
+    puts 'No authors available' if @authors.empty?
+    puts ' '
+    @authors.each_with_index do |author, index|
+      puts "#{index + 1}. First Name: #{author.first_name}, Last Name: #{author.last_name}"
+    end
+    puts ' '
+  end
+
   def exit_app
     puts 'Thank you for using this App.'
     exit
