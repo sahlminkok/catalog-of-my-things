@@ -19,4 +19,19 @@ RSpec.describe Genre do
       expect(custom_genre.id).to eq(custom_id)
     end
   end
+
+  describe '#add_item' do
+    it "adds an item to the genre's items list" do
+      item = instance_double('Item', genres: [])
+      genre.add_item(item)
+      expect(genre.instance_variable_get(:@items)).to include(item)
+    end
+
+    it "adds the genre to the item's genres list" do
+      item = instance_double('Item', genres: [])
+      genre.add_item(item)
+      expect(item).to receive(:genres)
+      genre.instance_variable_get(:@items).first.genres
+    end
+  end
 end
