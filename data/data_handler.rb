@@ -1,4 +1,5 @@
 require 'json'
+require_relative '../music_album'
 
 class DataHandler
   def initialize(data_manager)
@@ -69,6 +70,26 @@ class DataHandler
     puts 'Music Album saved to record successfully'
   rescue StandardError => e
     puts "Error saving to Json: #{e.message}"
+    []
+  end
+
+  def load_albums_from_json
+    file_path = './data/albums.json'
+    if File.exist?(file_path)
+      albums_data = @data_manager.load_from_json(file_path)
+    else
+      puts 'The JSON file does not exist. Creating empty file.'
+      File.write(file_path, '[]')
+      albums_data = []
+    end
+    loaded_albums = []
+    albums_data.each do |album_data|
+      loaded_albums << MusicAlbum.new(album_data[:publish_date], archived: album_data[:archived],
+                                                                 on_spotify: album_data[:on_spotify])
+    end
+    loaded_albums
+  rescue StandardError => e
+    puts "Error loading from JSON: #{e.message}"
     []
   end
 end
