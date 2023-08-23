@@ -10,8 +10,7 @@ class DataHandler
     @data_manager.save_to_json('./data/books.json', books_data)
     puts 'Book saved to record successfully'
   rescue StandardError => e
-    puts "Error loading from Json: #{e.message}"
-    puts 'The JSON file does not exist, returning empty array'
+    puts "Error saving to Json: #{e.message}"
     []
   end
 
@@ -32,6 +31,15 @@ class DataHandler
     loaded_books
   rescue StandardError => e
     puts "Error loading from JSON: #{e.message}"
+    []
+  end
+
+  def save_games_to_json(games)
+    games_data = games.map(&:to_hash)
+    @data_manager.save_to_json('./data/games.json', games_data)
+    puts 'Game saved Successfully'
+  rescue StandardError => e
+    puts "Error saving to json: #{e.message}"
     []
   end
 end
