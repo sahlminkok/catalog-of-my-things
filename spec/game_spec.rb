@@ -15,4 +15,15 @@ describe Game do
       expect(game.last_played_at).to eq(last_played_at)
     end
   end
+
+  describe 'to_hash' do
+    it 'should return a hash with game attributes' do
+      hash = game.to_hash
+      expect(hash).to be_a(Hash)
+      expect(hash[:publish_date]).to eq(publish_date)
+      expect(hash[:archived]).to eq(archived)
+      expect(hash[:multiplayer]).to eq(multiplayer)
+      expect(hash[:last_played_at]).to eq(last_played_at)
+    end
+  end
 end
