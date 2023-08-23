@@ -12,6 +12,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [📄 Project Documentation ](#-project-documentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -47,6 +48,11 @@
 - **Add Functionality**
 - **List Functionality**
 - **Interactive User Prompts**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📄 Project Documentation <a name="live-demo"></a>
+- [Walk through video](https://drive.google.com/file/d/1CPEBP2gUZANTWH5nhPIfuR0hleMTRfXi/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
