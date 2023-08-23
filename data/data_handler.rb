@@ -50,7 +50,7 @@ class DataHandler
     else
       puts 'The JSON file does not exist. Creating an empty file'
       File.write(file_path, '[]')
-      books_data = []
+      games_data = []
     end
     loaded_games = []
     games_data.each do |game_data|
