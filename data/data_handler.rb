@@ -42,4 +42,24 @@ class DataHandler
     puts "Error saving to json: #{e.message}"
     []
   end
+
+  def load_games_from_json
+    file_path = './data/games.json'
+    if File.exit?(file_path)
+      games_data = @data_manager.load_from_json(file_path)
+    else
+      puts 'The JSON file does not exist. Creating an empty file'
+      File.write(file_path, '[]')
+      books_data = []
+    end
+    loaded_games = []
+    games_data.each do |game_data|
+      loaded_games << Game.new(game_data[:multiplayer], game_data[:last_played_at],
+                               game_data[:publish_date])
+    end
+    loaded_games
+  rescue StandardError => e
+    puts "Error loading from JSON: #{e.message}"
+    []
+  end
 end
