@@ -1,37 +1,41 @@
 require 'date'
 
 class Item
-  attr_accessor :publish_date, :archived
-  attr_reader :id, :genres, :authors, :sources, :labels
+  attr_accessor :publish_date, :archived, :genre, :author, :source, :label
+  attr_reader :id
 
   def initialize(publish_date, archived: false)
     @id = Random.rand(1...1000)
     @publish_date = publish_date
     @archived = archived
-    @genres = []
-    @authors = []
-    @sources = []
-    @labels = []
   end
 
   def add_genre(genre)
-    @genres << genre
+    @genre = genre
+    return if genre.items.include?(self)
+
+    genre.items << self
   end
 
   def add_author(author)
-    @authors << author
+    @author = author
+    return if author.items.include?(self)
+
+    author.items << self
   end
 
   def add_source(source)
-    @sources << source
+    @source = source
+    return if source.items.include?(self)
+
+    source.items << self
   end
 
   def add_label(label)
-    @labels << label
-  end
+    @label = label
+    return if label.items.include?(self)
 
-  def move_to_archived
-    @archived = can_be_archived?
+    label.items << self
   end
 
   def to_hash
@@ -39,15 +43,20 @@ class Item
       id: @id,
       publish_date: @publish_date,
       archived: @archived,
-      genres: @genres,
-      authors: @authors,
-      sources: @sources,
-      labels: @labels
+      genre: @genre,
+      author: @author,
+      source: @source,
+      label: @label
     }
   end
 
+  def move_to_archived
+    @archived = can_be_archived?
+  end
+
   def can_be_archived?
-    years_difference = (Date.today.year - Date.parse(@publish_date).year)
-    years_difference > 10
+    today = Date.today
+    ten_years_ago = Date.new(today.year - 10, today.month, today.day)
+    @published_date < ten_years_ago
   end
 end

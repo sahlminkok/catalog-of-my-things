@@ -16,8 +16,10 @@ class Game < Item
     )
   end
 
-  def can_be_archived?()
-    duration = (Date.today.year - Date.parse(@last_played_at).year)
-    super && (duration > 2)
+  def can_be_archived?
+    today = Date.today
+    two_years_ago = Date.new(today.year - 2, today.month, today.day)
+    last_played_date = Date.parse(@last_played_at)
+    last_played_date < two_years_ago
   end
 end

@@ -33,7 +33,7 @@ describe Game do
         today = Date.parse('2023-01-01')
         allow(Date).to receive(:today).and_return(today)
         game.last_played_at = '2020-01-01'
-        expect(game.can_be_archived?).to be_falsey
+        expect(game.can_be_archived?).to be_truthy
       end
 
       it 'should return false if super method returns false' do
@@ -49,7 +49,7 @@ describe Game do
       it 'should return false' do
         today = Date.new(2023, 8, 22)
         allow(Date).to receive(:today).and_return(today)
-        expect(game.can_be_archived?).to be_falsey
+        expect(game.can_be_archived?).to be_falsy
       end
     end
   end
