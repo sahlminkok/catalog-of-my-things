@@ -56,6 +56,14 @@ class App
     puts ' '
   end
 
+  def list_all_genres
+    puts 'No genres available' if @genres.empty?
+    puts ' '
+    @genres.each_with_index do |genre, index|
+      puts "#{index + 1}. Name: #{genre.name}, ID: #{genre.id}"
+    end
+  end
+
   def exit_app
     puts 'Thank you for using this App.'
     exit
