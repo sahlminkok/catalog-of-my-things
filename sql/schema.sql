@@ -74,3 +74,12 @@ CREATE TABLE game (
 	FOREIGN KEY (label_id) REFERENCES label(id),
 	FOREIGN KEY (author_id) REFERENCES author(id)
 );
+
+-- Author schema structure
+
+CREATE TABLE author (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  PRIMARY KEY (id)
+);
