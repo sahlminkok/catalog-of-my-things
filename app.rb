@@ -99,6 +99,22 @@ class App
     puts ' '
   end
 
+  def add_game
+    print 'Multiplayer [yes/no]: '
+    multiplayer = gets.chomp.downcase
+
+    print 'Last Played At [yyyy-mm-dd]: '
+    last_played_at = gets.chomp
+
+    print 'Publish Date [yyyy-mm-dd]: '
+    publish_date = gets.chomp
+
+    game = Game.new(multiplayer, last_played_at, publish_date)
+    @games << game
+
+    puts "Game created successfully: #{game.id}"
+  end
+
   def exit_app
     puts 'Thank you for using this App.'
     exit
