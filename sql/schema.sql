@@ -41,8 +41,8 @@ CREATE TABLE music_album (
   archived BOOLEAN,
   on_spotify BOOLEAN,
   genre_id INT,
-	label_id INT,
-	author_id INT,
+  label_id INT,
+  author_id INT,
   PRIMARY KEY (id),
 	FOREIGN KEY (genre_id) REFERENCES genre(id),
 	FOREIGN KEY (label_id) REFERENCES label(id),
@@ -54,6 +54,5 @@ CREATE TABLE music_album (
 CREATE TABLE genre (
   id INT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(255),
-  item_id INT,
   PRIMARY KEY (id)
 );
