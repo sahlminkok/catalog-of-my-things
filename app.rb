@@ -1,4 +1,5 @@
 require_relative 'all_paths'
+require_relative 'music_album'
 
 class App
   def initialize
@@ -62,6 +63,20 @@ class App
     @genres.each_with_index do |genre, index|
       puts "#{index + 1}. Name: #{genre.name}, ID: #{genre.id}"
     end
+  end
+
+  def add_album
+    print 'Enter publish date [yyyy-mm-dd]: '
+    publish_date = gets.chomp
+
+    print 'Is it on spotify? [y/n]: '
+    on_spotify = gets.chomp.downcase
+
+    album = MusicAlbum.new(publish_date, on_spotify: (on_spotify == 'y'))
+    @albums << album
+
+    puts "Music Album created successfully, id: #{album.id}"
+    puts ' '
   end
 
   def exit_app
