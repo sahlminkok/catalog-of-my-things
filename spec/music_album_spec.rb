@@ -10,4 +10,10 @@ RSpec.describe MusicAlbum do
       expect(album.on_spotify).to be_falsy
     end
   end
+
+  it 'is on_spotify if it was initialized' do
+    album = MusicAlbum.new('2020-01-01', on_spotify: true)
+
+    expect(album.on_spotify).to be_truthy
+  end
 end
