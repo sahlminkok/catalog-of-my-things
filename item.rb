@@ -46,8 +46,6 @@ class Item
     }
   end
 
-  private
-
   def can_be_archived?
     years_difference = (Date.today.year - Date.parse(@publish_date).year)
     years_difference > 10
