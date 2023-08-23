@@ -6,6 +6,8 @@ class App
     @data_handler = DataHandler.new(data_manager)
     @books = @data_handler.load_books_from_json
     @labels = []
+    @albums = []
+    @genres = []
   end
 
   def list_books
@@ -43,6 +45,15 @@ class App
 
     puts "Book created Successfully! (id: #{book.id})"
     @data_handler.save_books_to_json(@books)
+  end
+
+  def list_music_albums
+    puts 'No music albums available' if @albums.empty?
+    puts ' '
+    @albums.each_with_index do |album, index|
+      puts "#{index + 1}. Publish Date: #{album.publish_date}, On Spotify: #{album.on_spotify}"
+    end
+    puts ' '
   end
 
   def exit_app
