@@ -12,7 +12,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [📄 Project Documentation ](#-project-documentation-)
+  - [🚶‍♀️🚶‍♀️ Walk Through ](#️️-walk-through-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -51,8 +51,8 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📄 Project Documentation <a name="live-demo"></a>
-- [Walk through video](https://drive.google.com/file/d/1CPEBP2gUZANTWH5nhPIfuR0hleMTRfXi/view?usp=sharing)
+## 🚶‍♀️🚶‍♀️ Walk Through <a name="live-demo"></a>
+- [Walk through video](https://drive.google.com/file/d/1KCWxqjHeaR-nFeyjv_DMIZUKrD-ayr9m/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
