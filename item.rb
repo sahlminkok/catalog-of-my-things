@@ -43,10 +43,10 @@ class Item
       id: @id,
       publish_date: @publish_date,
       archived: @archived,
-      genres: @genre,
-      authors: @author,
-      sources: @source,
-      labels: @label
+      genre: @genre,
+      author: @author,
+      source: @source,
+      label: @label
     }
   end
 

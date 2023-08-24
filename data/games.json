@@ -1,24 +1,46 @@
 [
   {
-    "id": 812,
+    "id": 422,
     "publish_date": "2001-01-01",
     "archived": false,
-    "genres": null,
-    "authors": null,
-    "sources": null,
-    "labels": null,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
     "multiplayer": "yes",
     "last_played_at": "2010-01-01"
   },
   {
-    "id": 384,
+    "id": 734,
     "publish_date": "1020-01-01",
     "archived": false,
-    "genres": null,
-    "authors": null,
-    "sources": null,
-    "labels": null,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
     "multiplayer": "no",
     "last_played_at": "1200-10-01"
+  },
+  {
+    "id": 509,
+    "publish_date": "6060-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "multiplayer": "yes",
+    "last_played_at": "1010-01-01"
+  },
+  {
+    "id": 238,
+    "publish_date": "2000-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "multiplayer": "no",
+    "last_played_at": "1000-01-01"
   }
 ]
