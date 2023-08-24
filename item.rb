@@ -43,10 +43,10 @@ class Item
       id: @id,
       publish_date: @publish_date,
       archived: @archived,
-      genre: @genre,
-      author: @author,
-      source: @source,
-      label: @label
+      genres: @genre,
+      authors: @author,
+      sources: @source,
+      labels: @label
     }
   end
 
@@ -57,6 +57,6 @@ class Item
   def can_be_archived?
     today = Date.today
     ten_years_ago = Date.new(today.year - 10, today.month, today.day)
-    @published_date < ten_years_ago
+    @publish_date < ten_years_ago
   end
 end

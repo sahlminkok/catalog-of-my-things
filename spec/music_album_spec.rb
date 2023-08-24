@@ -1,10 +1,11 @@
 require_relative '../music_album'
+require 'rspec'
 
 RSpec.describe MusicAlbum do
   before(:each) do
     @album = MusicAlbum.new('2010-02-02')
-    @album2 = MusicAlbum.new('2020-01-01', on_spotify: true)
-    @album3 = MusicAlbum.new('2010-01-01', on_spotify: true)
+    @album2 = MusicAlbum.new(Date.parse('2020-01-01'), on_spotify: true)
+    @album3 = MusicAlbum.new(Date.parse('2010-01-01'), on_spotify: true)
   end
 
   context 'When initializing the music Album' do

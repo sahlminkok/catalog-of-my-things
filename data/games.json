@@ -1,1 +1,24 @@
-[{"id":509,"publish_date":"2001-01-01","archived":false,"genres":[],"authors":[],"sources":[],"labels":[],"multiplayer":"yes","last_played_at":"2010-01-01"}]
+[
+  {
+    "id": 812,
+    "publish_date": "2001-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "multiplayer": "yes",
+    "last_played_at": "2010-01-01"
+  },
+  {
+    "id": 384,
+    "publish_date": "1020-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "multiplayer": "no",
+    "last_played_at": "1200-10-01"
+  }
+]

@@ -1,4 +1,5 @@
 require_relative '../book'
+require_relative '../item'
 require 'rspec'
 
 RSpec.describe Book do
@@ -29,12 +30,12 @@ RSpec.describe Book do
 
   describe '#can_be_archived?' do
     it 'returns true when cover_state is "bad"' do
-      book = Book.new('Publisher Name', 'bad', '2023-08-22')
+      book = Book.new('Publisher Name', 'bad', Date.parse('2023-08-22'))
       expect(book.can_be_archived?).to be_truthy
     end
 
     it 'returns false when cover_state is "good"' do
-      book = Book.new('Publisher Name', 'good', '2023-08-22')
+      book = Book.new('Publisher Name', 'good', Date.parse('2023-08-22'))
       expect(book.can_be_archived?).to be_falsey
     end
   end

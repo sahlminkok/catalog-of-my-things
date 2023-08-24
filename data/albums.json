@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 256,
+    "publish_date": "2001-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "on_spotify": true
+  },
+  {
+    "id": 699,
+    "publish_date": "0003-03-03",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "on_spotify": false
+  }
+]

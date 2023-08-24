@@ -1,1 +1,46 @@
-[{"id":352,"publish_date":"1999-01-01","archived":false,"genres":[],"authors":[],"sources":[],"labels":[],"publisher":"walker","cover_state":"bad"},{"id":298,"publish_date":"1999-01-01","archived":false,"genres":[],"authors":[],"sources":[],"labels":[],"publisher":"jimmy","cover_state":"good"},{"id":954,"publish_date":"2010-01-01","archived":false,"genres":[],"authors":[],"sources":[],"labels":[],"publisher":"kiki","cover_state":"bad"}]
+[
+  {
+    "id": 726,
+    "publish_date": "1999-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "publisher": "walker",
+    "cover_state": "bad"
+  },
+  {
+    "id": 18,
+    "publish_date": "1999-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "publisher": "jimmy",
+    "cover_state": "good"
+  },
+  {
+    "id": 720,
+    "publish_date": "2010-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "publisher": "kiki",
+    "cover_state": "bad"
+  },
+  {
+    "id": 847,
+    "publish_date": "2000-01-01",
+    "archived": false,
+    "genres": null,
+    "authors": null,
+    "sources": null,
+    "labels": null,
+    "publisher": "joah",
+    "cover_state": "bad"
+  }
+]

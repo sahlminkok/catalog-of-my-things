@@ -20,8 +20,8 @@ describe Author do
       author.add_item(item1)
       author.add_item(item2)
 
-      expect(item1.authors).to include(author)
-      expect(item2.authors).to include(author)
+      expect(item1.author).to eq(author)
+      expect(item2.author).to eq(author)
     end
   end
 end
