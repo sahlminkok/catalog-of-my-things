@@ -1,0 +1,68 @@
+[
+  {
+    "id": 237,
+    "publish_date": "1999-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "publisher": "walker",
+    "cover_state": "bad"
+  },
+  {
+    "id": 134,
+    "publish_date": "1999-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "publisher": "jimmy",
+    "cover_state": "good"
+  },
+  {
+    "id": 195,
+    "publish_date": "2010-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "publisher": "kiki",
+    "cover_state": "bad"
+  },
+  {
+    "id": 315,
+    "publish_date": "2000-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "publisher": "joah",
+    "cover_state": "bad"
+  },
+  {
+    "id": 511,
+    "publish_date": "1999-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "publisher": "mwaki",
+    "cover_state": "good"
+  },
+  {
+    "id": 912,
+    "publish_date": "1888-01-01",
+    "archived": false,
+    "genre": null,
+    "author": null,
+    "source": null,
+    "label": null,
+    "publisher": "juni",
+    "cover_state": "bad"
+  }
+]
