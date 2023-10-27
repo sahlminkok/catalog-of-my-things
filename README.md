@@ -117,7 +117,7 @@ To run tests, run the following command:
 
 - GitHub: [@sahlminkok](https://github.com/sahlminkok)
 - Twitter: [@sahlminkok](https://twitter.com/sahlminkok)
-- LinkedIn: [sahlminkok](https://linkedin.com/in/sahlminkok)
+- LinkedIn: [Sahalu Aminu](https://linkedin.com/in/sahlminkok)
 
 👤 **Abel Morara**
 
